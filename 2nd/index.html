@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/jquery.mobile.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/leaflet.css" /> -->
+        <style>
+            body {
+                background: white;
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+            .center {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .ui-content {
+                padding: 1px !important;
+            }
+            .info-body {
+                background: #27364c;
+                color: whitesmoke;
+                font-family: 'Montserrat', sans-serif;
+            }
+            h2 {
+                margin: 10px 0px 0px 0px;
+            }
+            h3 {
+                margin: 0px 0px 3px 0px;
+            }
+            h5 {
+                margin: 0px 0px 10px 0px;
+            }
+            a.ui-nodisc-icon.ui-btn:after, .ui-nodisc-icon .ui-btn:after {
+                background-color: whitesmoke;
+                /* color: #27364c; */
+            }
+            .center {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px !important;
+            }
+            .other {
+                color: whitesmoke;
+                border: 1px solid whitesmoke;
+                padding: 5px;
+                text-decoration: none;
+            }
+            /* .img-size {
+                width: 30px;
+                height: 30px;
+                margin: 0px;
+                padding: 0px;
+            } */
+            .img-size-sm {
+                width: 200px;
+                height: 200px;
+                border-radius: 4px;
+            }
+        </style>
+        <script src="js/jquery.js"></script>
+        <script src="js/app.js"></script>
+        <!-- <script src="js/leaflet.js"></script> -->
+        <script src="js/jquery.mobile.min.js"></script>
+        <script src="js/mainScript.js"></script>
+        <script src="phonegap.js"></script>
+    </head>
+    <body>
+        <div id="homeScreen" data-role="page">
+            <!-- <img src="imgs/Red-love-header-banner.png" class="banner" /> -->
+            <div data-role="content">
+                <div class="ui-grid-a center">
+                <div class="ui-block">
+                        <div class="container">
+                                <!-- Output Screen -->
+                            <div class="history-screen">
+                                <div class="history"></div>
+                            </div>
+                            <div class="screen">0</div>
+                            <!-- end output screen -->
+                                
+                            <!-- Button Functions -->
+                            <div class="func backspace">
+                                <button id="btnBackspace">
+                                <i class="material-icons">backspace</i>
+                                </button>
+                            </div>
+                            <div class="func-green">
+                                <button id="btnAllClear">AC</button>
+                            </div>
+                            <div class="func-green">
+                                <button id="btnClearEntry">CE</button>
+                            </div>
+                            <div class="func-blue">
+                                <button class="op">÷</button>
+                            </div>
+                            <div class="func-blue">
+                                <button class="op">x</button>
+                            </div>
+                            <div>
+                                <button class="num">7</button>
+                            </div>
+                            <div>
+                                <button class="num">8</button>
+                            </div>
+                            <div>
+                                <button class="num">9</button>
+                            </div>
+                            <div class="func-blue">
+                                <button class="op">-</button>    
+                            </div>
+                            <div>
+                                <button class="num">4</button>
+                            </div>
+                            <div>
+                                <button class="num">5</button>
+                            </div>
+                            <div>
+                                <button class="num">6</button>
+                            </div>
+                            <div class="func-blue">
+                                <button class="op">+</button>
+                            </div>
+                            <div>
+                                <button class="num">1</button>
+                            </div>
+                            <div>
+                                <button class="num">2</button>
+                            </div>
+                            <div>
+                                <button class="num">3</button>
+                            </div>
+                            <div class="zero">
+                                <button class=" num">0</button>
+                            </div>
+                            <div class="func-blue">
+                                <button id="btnDecimal">.</button>
+                            </div>
+                            <div class="equal func-green">
+                                <button id="btnEqual">=</button>
+                            </div>
+                            <!-- end button functions -->
+                        </div> <!-- end container -->
+                        <!-- end calculator -->
+                        
+                        
+                        <!-- Alert Box -->
+                        <div id="alert1" class="alert">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                            <strong>Warning!</strong> Cannot Divide By Zero
+                        </div>
+                        
+                        <div id="alert2" class="alert">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                            <strong>Warning!</strong> Maximum length of input (12) exceeded
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a center">
+                    <div class="ui-block">
+                        <a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-body" id="aboutScreen" data-role="page">
+            <header data-role="header" data-position="fixed" data-id="appHeader">
+                <h1>About</h1>
+                <!-- <img class="center img-size" src="imgs/f-icon.png" /> -->
+                <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+            </header>
+            <div data-role="content" class="center">
+                <h2 class="center">FahadIn</h2>
+                <img class="center img-size-sm" src="imgs/fahadin.jpg" />
+                <h3 class="center">Best Creative Application Software</h3>
+                <h5 class="center">made by Fahad</h5>
+                <p class="center">Calculator is a device that performs arithmetic operations on numbers. The simplest calculators can do only addition, subtraction, multiplication, and division.
+                        <br>
+                        <br>
+                        <a href="#" class="other">Our Other Apps</a></p>
+                <p class="center">kawsarkamal71@gmail.com</p>
+            </div>
+        </div>
+        
+        <!-- end alert box -->
+    </body>
+</html>
