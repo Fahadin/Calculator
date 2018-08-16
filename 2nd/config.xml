@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.calculator.fahadin"
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    id          = "com.Fahadin.calculator"
     versionCode = "1" 
     version     = "1.0.0" >
-   <name>FahadIn Calculator</name>
+   <name>Fahadin Calculator</name>
     <description>
-            A Mobile Simple Calculator Application Software.
+            A mobile calculator application. 
     </description>
-    <author href="https://github.com/Fahadin/" email="kawsarkamal71@gmail.com ">
-             Fahad Kamal
+    <author href="https://www.facebook.com/fahadkamal05/" email="kawsarkamal71@gmail.com">
+            Fahad Kamal
     </author>
-    
+  
     <platform name="ios"/>
     <platform name="android"/>
     <platform name="winphone"/>
-    <preference name="phonegap-version" value="cli-6.1.0" />
+
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
@@ -23,7 +25,7 @@
     <preference name="disallowOverscroll" value="true" />
     <preference name="target-device" value="universal"/>
     <preference name="deployment-target" value="7.0"/>
-    <preference name="exit-on-suspend" value="false"/>
+    <preference name="exit-on-suspend" value="true"/>
     <preference name="detect-data-types" value="true"/>
     <preference name="prerendered-icon" value="false"/>
     <preference name="StatusBarOverlaysWebView" value="false" />
@@ -32,7 +34,16 @@
     
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="android-build-tool" value="ant|gradle" />
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
     
+<!--     <config-file platform="android" parent="/manifest" mode="merge">
+      <supports-screens
+        android:xlargeScreens="false"
+        android:largeScreens="false"
+        android:smallScreens="false" />
+    </config-file> -->
+
      <platform name="ios">
         <icon src="res/icon/ios/icon.png" width="57" height="57"/>
         <icon src="res/icon/ios/icon@2x.png" width="114" height="114"/>
@@ -53,12 +64,12 @@
       </platform>
       
        <platform name="android">
-        <icon src="res/icon/android/drawable-ldpi-icon" qualifier="ldpi"/>
-        <icon src="res/icon/android/drawable-mdpi-icon" qualifier="mdpi"/>
-        <icon src="res/icon/android/drawable-hdpi-icon" qualifier="hdpi"/>
-        <icon src="res/icon/android/drawable-xhdpi-icon" qualifier="xhdpi"/>
-        <icon src="res/icon/android/drawable-xxhdpi-icon" qualifier="xxhdpi"/>
-        <icon src="res/icon/android/drawable-xxxhdpi-icon" qualifier="xxxhdpi"/>
+        <icon src="res/icon/android/drawable-ldpi-icon.png" qualifier="ldpi"/>
+        <icon src="res/icon/android/drawable-mdpi-icon.png" qualifier="mdpi"/>
+        <icon src="res/icon/android/drawable-hdpi-icon.png" qualifier="hdpi"/>
+        <icon src="res/icon/android/drawable-xhdpi-icon.png" qualifier="xhdpi"/>
+        <icon src="res/icon/android/drawable-xxhdpi-icon.png" qualifier="xxhdpi"/>
+        <icon src="res/icon/android/drawable-xxxhdpi-icon.png" qualifier="xxxhdpi"/>
       </platform>
       
        <platform name="ios">
@@ -72,12 +83,12 @@
       </platform>
       
       <platform name="android">
-        <splash src="res/screen/android/drawable-port-ldpi-screen" qualifier="ldpi"/>
-        <splash src="res/screen/android/drawable-port-mdpi-screen" qualifier="mdpi"/>
-        <splash src="res/screen/android/drawable-port-hdpi-screen" qualifier="hdpi"/>
-        <splash src="res/screen/android/drawable-port-xhdpi-screen" qualifier="xhdpi"/>
-        <splash src="res/screen/android/drawable-port-xxhdpi-screen" qualifier="xxhdpi"/>
-        <splash src="res/screen/android/drawable-port-xxxhdpi-screen" qualifier="xxxhdpi"/>
+        <splash src="res/screen/android/drawable-port-ldpi-screen.png" qualifier="ldpi"/>
+        <splash src="res/screen/android/drawable-port-mdpi-screen.png" qualifier="mdpi"/>
+        <splash src="res/screen/android/drawable-port-hdpi-screen.png" qualifier="hdpi"/>
+        <splash src="res/screen/android/drawable-port-xhdpi-screen.png" qualifier="xhdpi"/>
+        <splash src="res/screen/android/drawable-port-xxhdpi-screen.png" qualifier="xxhdpi"/>
+        <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" qualifier="xxxhdpi"/>
       </platform>
       
       <preference name="permissions" value="none"/>
@@ -108,5 +119,5 @@
         <allow-intent href="itms:*"/>
         <allow-intent href="itms-apps:*"/>
       </platform>
-      
+     
 </widget>
