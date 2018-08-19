@@ -69,6 +69,10 @@
         <script src="js/jquery.mobile.min.js"></script>
         <script src="js/mainScript.js"></script>
         <script src="phonegap.js"></script>
+        <script>
+            var keyPadTune = new audio();
+            keyPadTune.src = "audio/Click-On-Sound.wav";
+        </script>
     </head>
     <body>
         <div id="homeScreen" data-role="page">
@@ -87,62 +91,62 @@
                             <!-- Button Functions -->
                             <div class="func backspace">
                                 <button id="btnBackspace">
-                                <i class="material-icons">backspace</i>
+                                <i class="material-icons" onmousedown="keyPadTune.play()">backspace</i>
                                 </button>
                             </div>
                             <div class="func-green">
-                                <button id="btnAllClear">AC</button>
+                                <button id="btnAllClear" onmousedown="keyPadTune.play()">AC</button>
                             </div>
                             <div class="func-green">
-                                <button id="btnClearEntry">CE</button>
+                                <button id="btnClearEntry" onmousedown="keyPadTune.play()">CE</button>
                             </div>
                             <div class="func-blue">
-                                <button class="op">÷</button>
+                                <button class="op" onmousedown="keyPadTune.play()">÷</button>
                             </div>
                             <div class="func-blue">
-                                <button class="op">x</button>
+                                <button class="op" onmousedown="keyPadTune.play()">x</button>
                             </div>
                             <div>
-                                <button class="num">7</button>
+                                <button class="num" onmousedown="keyPadTune.play()">7</button>
                             </div>
                             <div>
-                                <button class="num">8</button>
+                                <button class="num" onmousedown="keyPadTune.play()">8</button>
                             </div>
                             <div>
-                                <button class="num">9</button>
+                                <button class="num" onmousedown="keyPadTune.play()">9</button>
                             </div>
                             <div class="func-blue">
                                 <button class="op">-</button>    
                             </div>
                             <div>
-                                <button class="num">4</button>
+                                <button class="num" onmousedown="keyPadTune.play()">4</button>
                             </div>
                             <div>
-                                <button class="num">5</button>
+                                <button class="num" onmousedown="keyPadTune.play()">5</button>
                             </div>
                             <div>
-                                <button class="num">6</button>
+                                <button class="num" onmousedown="keyPadTune.play()">6</button>
                             </div>
                             <div class="func-blue">
-                                <button class="op">+</button>
+                                <button class="op" onmousedown="keyPadTune.play()">+</button>
                             </div>
                             <div>
-                                <button class="num">1</button>
+                                <button class="num" onmousedown="keyPadTune.play()">1</button>
                             </div>
                             <div>
-                                <button class="num">2</button>
+                                <button class="num" onmousedown="keyPadTune.play()">2</button>
                             </div>
                             <div>
-                                <button class="num">3</button>
+                                <button class="num" onmousedown="keyPadTune.play()">3</button>
                             </div>
                             <div class="zero">
-                                <button class=" num">0</button>
+                                <button class=" num" onmousedown="keyPadTune.play()">0</button>
                             </div>
                             <div class="func-blue">
-                                <button id="btnDecimal">.</button>
+                                <button id="btnDecimal" onmousedown="keyPadTune.play()">.</button>
                             </div>
                             <div class="equal func-green">
-                                <button id="btnEqual">=</button>
+                                <button id="btnEqual" onmousedown="keyPadTune.play()">=</button>
                             </div>
                             <!-- end button functions -->
                         </div> <!-- end container -->
